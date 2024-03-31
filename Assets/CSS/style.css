@@ -4,52 +4,143 @@
     margin: 0;
 }
 
-body {
-    background-color: #d9dcd6;
-}
 
 header {
-    display: flexbox;
-    justify-content: flex-start;
-    padding: 10px;
+    padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #564B58;
     color: aquamarine;
 }
-
+    
+header h1 {
+    display: inline-block;
+    font-size: 40px;
+}
+    
 header nav {
-    padding-top: 20px;
+    padding-top: 15px;
     margin-right: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
 }
-
-header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
+    
 header nav ul {
     list-style-type: none;
 }
+    
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+       
+}
 
-p {
-    font-size: 16px;
+.subtitle {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("/Assets/images/blue_striped_banner.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 main {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
-footer {
-    padding: 30px;
-    clear: both;
+section {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+section::after h2 {
+    content: '';
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 5px;
+    background-color:#564B58;
+    transform: translateX(-50%);
+}
+
+section > h2 {
+    position: relative;
+    color: #564B58;
+    padding: 5px 20px;
+    margin: 0;
+    z-index: 1;
+}
+
+section > div {
+    padding-left: 40px;
+}
+    
+.contactMe {
+    padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: left;
+    color: aquamarine;
+}
+    
+.contactMe h2 {
+    display: inline-block;
+    font-size: 40px;
+}
+    
+.contactMe nav {
+    margin-right: 1000px;
+    float: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+    
+.contactMe nav ul {
+    list-style-type: none;
+}
+    
+.contactMe nav ul li {
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
-footer h2 {
-    font-size: 20px;
+.work-subcategory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.work-subcategory-item {
+    width: calc(50% - 10px); /* Two items per row with spacing */
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid aquamarine;
+}
+
+.work-subcategory-item.surf-report {
+    background-image: url('surf_report.jpg');
+}
+
+.work-subcategory-item.led-wall {
+    background-image: url('led_wall.jpg');
+}
+.work-subcategory-item.calculator {
+    background-image: url('calculator.jpg');
+}
+
+.work-subcategory-item.pastel-puzzles {
+    background-image: url('pastel_puzzles.jpg');
+}
+
+.work-subcategory-item.run-buddy {
+    background-image: url('run_buddy.jpg');
+}
+    
+@media (max-width: 768px) {
+    .work-subcategory-item {
+        width: 100%; 
 }
