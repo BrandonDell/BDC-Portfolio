@@ -2,12 +2,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 
 header {
     padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #564B58;
     color: aquamarine;
 }
@@ -15,13 +14,13 @@ header {
 header h1 {
     display: inline-block;
     font-size: 40px;
+    border: 3px solid aquamarine;
 }
     
 header nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
 }
     
@@ -42,6 +41,7 @@ header nav ul li {
     background-image: url("/Assets/images/blue_striped_banner.jpg");
     background-size: cover;
     background-position: center;
+    border: 3px solid aquamarine;
 }
 
 main {
@@ -54,6 +54,7 @@ main {
 section {
     margin-bottom: 20px;
     position: relative;
+    border: 3px solid aquamarine;
 }
 
 section::after h2 {
@@ -65,6 +66,7 @@ section::after h2 {
     width: 5px;
     background-color:#564B58;
     transform: translateX(-50%);
+    border: 3px solid aquamarine;
 }
 
 section > h2 {
@@ -73,15 +75,36 @@ section > h2 {
     padding: 5px 20px;
     margin: 0;
     z-index: 1;
+    
 }
 
 section > div {
     padding-left: 40px;
 }
-    
+.work_item_surf {
+    display: box;
+    height: 20vh;
+    background-image: url(/images/surf_report.jpg);
+    text-align:start;
+    padding: 100px 10px;
+    margin-bottom: 10px;
+    border: 3px solid aquamarine;
+}
+.work-subcategory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.work_item {
+    width: calc(50% - 10px); /* Two items per row with spacing */
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 3px solid aquamarine;
+}
+
 .contactMe {
     padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: aquamarine;
 }
     
@@ -93,7 +116,6 @@ section > div {
 .contactMe nav {
     margin-right: 1000px;
     float: right;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
 }
     
@@ -107,28 +129,14 @@ section > div {
     margin-left: 50px;
 }
 
-.work-subcategory {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.work-subcategory-item {
-    width: calc(50% - 10px); /* Two items per row with spacing */
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 3px solid aquamarine;
-}
-
-.work-subcategory-item.surf-report {
+.work_item.surf-report {
     background-image: url('surf_report.jpg');
 }
 
-.work-subcategory-item.led-wall {
+.work_item.led-wall {
     background-image: url('led_wall.jpg');
 }
-.work-subcategory-item.calculator {
+.work_item.calculator {
     background-image: url('calculator.jpg');
 }
 
@@ -136,7 +144,7 @@ section > div {
     background-image: url('pastel_puzzles.jpg');
 }
 
-.work-subcategory-item.run-buddy {
+.work_item.run-buddy {
     background-image: url('run_buddy.jpg');
 }
     
