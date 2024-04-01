@@ -4,11 +4,18 @@
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
+/* 
+1) need a colored box around my name
+2) need the text color the same color of the box around my name
+3) need my name text colored the same as the background color
+4) copy pasta the UL and have a different color and pointer
+ */
 header {
     padding: 20px;
     background-color: #564B58;
     color: aquamarine;
+    background-image:url(../images/blue_striped_banner.jpg);
+    background-position: auto;
 }
     
 header h1 {
@@ -31,32 +38,48 @@ header nav ul {
 header nav ul li {
     display: inline-block;
     margin-left: 25px;
+    text-decoration: underline;
        
 }
-
-.subtitle {
+/* 
+1) subtitle section does not work
+3) need a colored box (same color as name box) 
+*/
+subtitle {
+    text-align: end;
     height: 100px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("/Assets/images/blue_striped_banner.jpg");
+    background-image: url("../images/blue_striped_banner.jpg");
     background-size: cover;
     background-position: center;
     border: 3px solid aquamarine;
+    /* same as:
+    border-top: 3px solid aquamarine; 
+    border-bottom: 3px solid aquamarine;
+    border-right: 3px solid aquamarine;
+    border-left: 3px solid aquamarine; */
+    
 }
-
+/* 
+1) need h2 seperated by a vertical line 
+2) need to place text of class workItems in the corret area
+*/
 main {
     flex: 1; 
     display: flex;
     flex-direction: column;
     padding: 20px;
+    width: 90%;
+    margin: auto;
 }
 
 section {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     position: relative;
     border: 3px solid aquamarine;
 }
-
+/* attempt at making a vertical line to seperate h2 and content */
 section::after h2 {
     content: '';
     position: relative;
@@ -79,30 +102,46 @@ section > h2 {
 }
 
 section > div {
-    padding-left: 40px;
+    padding: 10px;
 }
-.work_item_surf {
+.workItemSurf {
     display: box;
     height: 20vh;
-    background-image: url(/images/surf_report.jpg);
+    background-image: url(../images/surf_report.jpg);
     text-align:start;
-    padding: 100px 10px;
+    padding: 100px 1px 10px 20px;
     margin-bottom: 10px;
     border: 3px solid aquamarine;
 }
-.work-subcategory {
+.workSubcategory {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.work_item {
+.workItem {
     width: calc(50% - 10px); /* Two items per row with spacing */
-    padding: 15px;
-    margin-bottom: 10px;
+    padding: 25px 15px 15px;
+    margin-top: 10px;
     border: 3px solid aquamarine;
 }
 
+#ledWall {
+    background-image: url(../images/led_wall.jpg);
+    background-position: center;
+}
+
+#calculator {
+    background-image: url(../images/calculator.jpg);
+}
+
+#pastelPuzzels {
+    background-image: url(../images/pastel_puzzles.jpg);
+}
+
+#runBuddy {
+    background-image: url(../images/run-buddy.jpg);
+}
 .contactMe {
     padding: 20px;
     color: aquamarine;
@@ -121,34 +160,23 @@ section > div {
     
 .contactMe nav ul {
     list-style-type: none;
+    
 }
     
 .contactMe nav ul li {
     display: inline-block;
-    margin-top: 50px;
-    margin-left: 50px;
-}
-
-.work_item.surf-report {
-    background-image: url('surf_report.jpg');
-}
-
-.work_item.led-wall {
-    background-image: url('led_wall.jpg');
-}
-.work_item.calculator {
-    background-image: url('calculator.jpg');
-}
-
-.work-subcategory-item.pastel-puzzles {
-    background-image: url('pastel_puzzles.jpg');
-}
-
-.work_item.run-buddy {
-    background-image: url('run_buddy.jpg');
-}
+    margin-top: 25px;
+    margin-left: 25px;
+    text-decoration: underline;
+    align-items: center;
     
-@media (max-width: 768px) {
-    .work-subcategory-item {
-        width: 100%; 
+   
 }
+
+   /* Dont think I did the media correctly */
+@media (max-width: 768px){
+    .workSubcategory{
+        width: 100%;
+        float: none;
+    }
+} 
