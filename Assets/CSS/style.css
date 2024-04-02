@@ -26,7 +26,11 @@ header nav {
     float: right;
     font-size: 30px;
 }
-/* Need a small space between titles and underline */
+/*Most Important to organize and align Work Section 
+   1)Website needs to be responsive that adapts to viewport 
+   2) Need each li to scroll to the title images to the deployed section
+   3) Need a small space between titles and underline
+   4) Quality README with description, screenshot, link to deployed applicaiton */
 header nav ul li {
     display: inline-block;
     list-style-type: none;
