@@ -4,7 +4,6 @@
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 header {
     padding: 20px 20px 20px 0;
     height: 100px;
@@ -14,7 +13,7 @@ header {
 header h1 {
     display: inline-block;
     font-size: 40px;
-    background-color: lightskyblue;
+    background-color: rgb(120, 200, 197);
     height: 65px;
     width: 300px;
     text-align: end;
@@ -25,9 +24,9 @@ header nav {
     padding-top: 20px;
     margin-right: 20px;
     float: right;
-    font-size: 20px;
+    font-size: 30px;
 }
-/* Need a small space between work and underline */
+/* Need a small space between titles and underline */
 header nav ul li {
     display: inline-block;
     list-style-type: none;
@@ -36,7 +35,7 @@ header nav ul li {
     color: #564B58;  
 }
 a {
-    color: lightskyblue;
+    color: rgb(120, 200, 197);
 }
 .subtitle {
     display: inline-block;
@@ -50,13 +49,14 @@ a {
 }
 .subtitle h2 {
     display: inline-block;
-    background-color: lightskyblue;
+    background-color: rgb(120, 200, 197);
     width:max-content;
     position:relative;
     padding: 10px;
     margin-top: 125px;
     margin-right: 100px;
     font-size: 30px;
+    color: #564B58;
 }
 main {
     display: flex;
@@ -67,9 +67,6 @@ main {
     padding: 20px;
     width: 90%;
     margin: auto;
-}
-section {
-    position: relative;
 }
 .aboutMe {
     display: flex;   
@@ -100,53 +97,38 @@ section {
     text-align: end;
     font-size: 30px;
 }
-
-
-/* .work h3 h4 {
-    display: inline-block;
-    background-color: lightskyblue;
-    height: 65px;
-    width: 300px;
-    text-align: end;
-    padding-top: 10px;
-    padding-right: 15px;
-} */
-
-.smallSectionOne {
-    display: flex;
-}
-.smallSectionTwo {
-    display: flex;
-}
-
 section > div {
     padding: 10px;
 }
-#workItemSurf {
-    display: box;
-    height: 20vh;
-    background-image: url(../images/surf_report.jpg);
-    text-align:start;
-    padding: 100px 1px 10px 20px;
-    margin-bottom: 10px;
-    border: 3px solid aquamarine;
-}
-.workSubcategory {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
-.workItem {
-    width: calc(50% - 10px); /* Two items per row with spacing */
+#surfReport {
+    height: 20vh;
+    width: 100%;
+    background-image: url(../images/surf_report.jpg);
+    padding: 100px 1px 10px 20px;
+    margin-right: 10px;
+    border: 3px solid rgb(120, 200, 197);
+}
+.smallSectionOne {
+    display: flex;
+    width: calc(50% - 10px); 
+    /* Two items per row with spacing */
     padding: 25px 15px 15px;
     margin-top: 10px;
-    border: 3px solid aquamarine;
+    border: 3px solid rgb(120, 200, 197); 
 }
+
+.smallSectionTwo {
+    display: flex;
+    width: calc(50% - 10px);
+    padding: 25px 15px 15px;
+    margin-top: 10px;
+    border: 3px solid rgb(120, 200, 197); 
+}
+ 
 
 #ledWall {
     background-image: url(../images/led_wall.jpg);
-    background-position: center;
 }
 
 #calculator {
