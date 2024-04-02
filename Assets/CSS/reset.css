@@ -1,0 +1,7 @@
+section > h2 {
+    position: relative;
+    color: #564B58;
+    padding: 5px 20px;
+    margin: 0;
+    z-index: 1;    
+}
