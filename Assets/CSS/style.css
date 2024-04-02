@@ -65,9 +65,8 @@ main {
     flex: 1;
     max-width: 88%;
     padding: 20px;
-    width: 90%;
-    margin: auto;
 }
+
 .aboutMe {
     display: flex;   
 }
@@ -98,10 +97,10 @@ main {
     font-size: 30px;
 }
 section > div {
-    padding: 10px;
+    padding-left: 50px;
 }
 
-#surfReport {
+.surfReport {
     height: 20vh;
     width: 100%;
     background-image: url(../images/surf_report.jpg);
@@ -109,37 +108,41 @@ section > div {
     margin-right: 10px;
     border: 3px solid rgb(120, 200, 197);
 }
-.smallSectionOne {
-    display: flex;
-    width: calc(50% - 10px); 
-    /* Two items per row with spacing */
-    padding: 25px 15px 15px;
-    margin-top: 10px;
-    border: 3px solid rgb(120, 200, 197); 
+.ledWall {
+    flex-direction: column;
+    height: 20vh;
+    width: 100%;
+    background-image: url(../images/led_wall.jpg);
+    padding: 100px 1px 10px 20px;
+    margin-right: 10px;
+    border: 3px solid rgb(120, 200, 197);
 }
 
+.calculator {
+    flex-shrink: 1;
+    flex-direction: column;
+    height: 20vh;
+    width: 100%;
+    background-image: url(../images/calculator.jpg);
+    padding: 100px 1px 10px 20px;
+    margin-right: 10px;
+    border: 3px solid rgb(120, 200, 197);
+    
+}
 .smallSectionTwo {
     display: flex;
-    width: calc(50% - 10px);
-    padding: 25px 15px 15px;
+    flex-direction: column;
+    width: 20vh;
+    padding: 100px 20px 10px 20px;
     margin-top: 10px;
     border: 3px solid rgb(120, 200, 197); 
 }
- 
 
-#ledWall {
-    background-image: url(../images/led_wall.jpg);
-}
-
-#calculator {
-    background-image: url(../images/calculator.jpg);
-}
-
-#pastelPuzzels {
+.pastelPuzzels {
     background-image: url(../images/pastel_puzzles.jpg);
 }
 
-#runBuddy {
+.runBuddy {
     background-image: url(../images/run-buddy.jpg);
 }
 .contactMe {
