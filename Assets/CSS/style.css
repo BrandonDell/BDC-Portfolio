@@ -26,11 +26,9 @@ header nav {
     float: right;
     font-size: 30px;
 }
-/*Most Important to organize and align Work Section 
-   1)Website needs to be responsive that adapts to viewport 
-   2) Need each li to scroll to the title images to the deployed section
-   3) Need a small space between titles and underline
-   4) Quality README with description, screenshot, link to deployed applicaiton */
+
+   /* 2) Need each li to scroll to the title images to the deployed section
+    */
 header nav ul li {
     display: inline-block;
     list-style-type: none;
@@ -116,11 +114,11 @@ section > div {
     color:  rgb(120, 200, 197);
 }
 .surfReport {
-    height: 30vh;
-    width: 98%;
+    height: 325px;
+    width: 99%;
     margin-top: 10px;
     border: 5px solid rgb(120, 200, 197);
-    background-image: url(../images/surf_report.jpg);
+    background-image: url(../images/surf.jpg);
 }
 
 .smallSectionTwo {
@@ -181,7 +179,7 @@ section > div {
 
 .contactMe ul li {
     display: inline-block;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     list-style: none;
     justify-content: center;
     align-items: center;
@@ -194,22 +192,21 @@ section > div {
 }
 @media screen and (max-width: 1350px){
     .aboutMe p{
-        width: 80%;
+        width: 95%;
     }
     .surfReport{
-        width: 800px;
+        width: 95%;
     }
     .contactMe nav ul li{
         margin-left: 50px;
         font-size: 20px;
     }
 } 
-@media  screen and (max-wicth: 100px) {
-    .surfReport{
-        width: 600px;
-    }  
-}
-   /* Need to confirm the media query is correct */
+@media  screen and (max-wicth: 914px) {
+    .header nav ul li {
+        height: 150px;
+    }
+          
 
 
 } 
